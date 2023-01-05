@@ -13,12 +13,12 @@ let score = 0;
 let highScore = 0;
 let life = 3;
 
-const numberGenerator = function () {
-  secretNumber = Math.trunc(Math.random() * 5) + 1;
-};
+const numberGenerator = () =>
+  (secretNumber = Math.trunc(Math.random() * 5) + 1);
 
 btnCheck.addEventListener("click", () => {
   let userGuess = Number(userInput.value);
+
   if (userGuess === secretNumber) {
     document.body.style.backgroundColor = "green";
     hiddenNumber.innerHTML = secretNumber;
